@@ -16,9 +16,8 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-
-var mongoDB = 'mongodb://localhost:27017/blogoSphere';
-// var mongoDB = "mongodb+srv://madhu:<password>@cluster0.l5wjx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+// var mongoDB = 'mongodb://localhost:27017/blogoSphere';
+var mongoDB = "mongodb+srv://madhupatel:madhu@cluster0.l5wjx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose.connect(mongoDB, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
@@ -122,6 +121,6 @@ app.delete("/blogs/:id", function(req, res) {
 	// redirect somewhere
 });
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(process.env.PORT || 5000, function() {
 	console.log("SERVER LISTENING!");
 });
